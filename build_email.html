@@ -79,6 +79,22 @@
         color: #32a32d;
       }
 
+      #build .status-image {
+        width: 25px;
+        background-size: 25px;
+        height: 30px;
+        margin-left: 15px;
+        margin-top: 0px;
+        vertical-align: middle;
+      }
+
+      #build.succeeded .status-image {
+        background: url(success.png) no-repeat;
+      }
+
+      #build.failed .status-image {
+        background: url(failed.png) no-repeat;
+      }
 
       #build tbody td {
         padding: 10px 20px 10px 0px;
@@ -124,8 +140,24 @@
         vertical-align: middle;
       }
 
-      .time img {
+      .time div {
         vertical-align: middle;
+      }
+
+      #build .time .stop-watch {
+        height: 20px;
+        width: 20px;
+        padding: 0px;
+        background-size: 20px;
+        display: inline-block;
+      }
+
+      #build.failed .time .stop-watch {
+        background: url(stopwatch-failed.png) no-repeat;
+      }
+
+      #build.succeeded .time .stop-watch {
+        background: url(stopwatch-success.png) no-repeat;
       }
 
       .time span {
@@ -210,14 +242,14 @@
           <td><img src="https://secure.gravatar.com/avatar/27f95ff21f0a4b94a72de0e8f780d4d2?s=40"/> <span><strong>engineyard / ey-gem</strong> (master)</span></td>
         </tr>
       </table>
-      <div id="build" class="succeeded" style="">
+      <div id="build" class="failed" style="">
         <div class="content" style="">
           <table>
             <thead>
               <tr>
-                <td></td>
+                <td><div class="status-image"></div></td>
                 <td style="">Build #270 was successful</td>
-                <td align="right" class="time"><img src="clock.png"> <span>6 minutes, 20 seconds</span></td>
+                <td align="right" class="time"><div class="stop-watch"></div> <span>6 minutes, 20 seconds</span></td>
               </tr>
             </thead>
             <tbody>
