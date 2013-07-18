@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style type="text/css" media="screen">
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        color: #808080;
+        width: 570px;
+        margin: 0 auto;
+      }
+
+      table, tr, td {
+        padding: 0px;
+        border: 0px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      #build {
+        border-radius: 5px;
+        border: 1px solid #adadad;
+        padding: 0px;
+        width: 100%;
+        font-size: 13px;
+      }
+
+      .repository {
+        color: #606060;
+      }
+
+      .repository {
+        font-size: 20px;
+      }
+
+      .repository td {
+        vertical-align: middle;
+      }
+
+      .repository td img {
+        vertical-align: middle;
+      }
+
+      .repository td span {
+        vertical-align: middle;
+      }
+
+      .repository {
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+
+      #build thead td {
+        padding: 10px 20px 10px 0px;
+        vertical-align: middle;
+      }
+
+      #build thead td:first-child {
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 5px;
+      }
+
+      #build thead tr {
+        border-bottom: 1px solid #adadad;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      #build.failed thead tr {
+        background-color: #fdcdce;
+        color: #df192a;
+      }
+      
+      #build.succeeded thead tr {
+        background-color: #baecb7;
+        color: #32a32d;
+      }
+
+
+      #build tbody td {
+        padding: 10px 20px 10px 0px;
+        height: 20px;
+      }
+
+      #build tbody {
+        margin-bottom: 40px;
+      }
+
+      #build tbody tr:first-child td {
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+
+      #build tbody tr:last-child td {
+        padding-bottom: 20px;
+        padding-top: 0px;
+      }
+
+      #build table {
+        border-spacing: 0;
+      }
+
+      #build a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #57769d;
+      }
+
+      #build td.profile-image:first-child {
+        text-align: center;
+      }
+
+      #build td:first-child {
+        width: 50px;
+        padding: 0px;
+      }
+
+      .time {
+        font-weight: normal;
+        font-size: 12px;
+        vertical-align: middle;
+      }
+
+      .time img {
+        vertical-align: middle;
+      }
+
+      .time span {
+        vertical-align: middle;
+      }
+
+      .footer {
+        background-color: #e9e6e7;
+        border-radius: 5px;
+        border: 1px solid #adadad;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 12px;
+        width: 570px; 
+        line-height: 16px;
+      }
+
+      .footnote {
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid #adadad;
+        font-size: 12px;
+        padding: 10px 20px;
+      }
+
+      .footnote strong {
+        font-size: 14px;
+      }
+
+      .footnote p {
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      .footnote p:last-child {
+        margin-bottom: 5px;
+      }
+
+      .footnote a {
+        color: #606060;
+      }
+
+      .footnote #mascot {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(270deg);
+        float: right;
+        top: -20px;
+        right: -10px;
+        position: relative;
+      }
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: right;
+      }
+
+      .tiny-footer {
+        font-size: 12px;
+        text-align: center;
+        margin: 0px auto;
+        margin-top: 10px;
+        vertical-align: middle;
+        height: 15px;
+      }
+
+      .tiny-footer img {
+        vertical-align: middle;
+      }
+
+      .tiny-footer span {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body" style="">
+      <table class="repository" background="" style="">
+        <tr style="">
+          <td><img src="https://secure.gravatar.com/avatar/27f95ff21f0a4b94a72de0e8f780d4d2?s=40"/> <span><strong>engineyard / ey-gem</strong> (master)</span></td>
+        </tr>
+      </table>
+      <div id="build" class="succeeded" style="">
+        <div class="content" style="">
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <td style="">Build #270 was successful</td>
+                <td align="right" class="time"><img src="clock.png"> <span>6 minutes, 20 seconds</span></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="profile-image"><img src="https://secure.gravatar.com/avatar/3200c5348a7c08c2f20fdaceac6804b0?s=15"></td>
+                <td><strong>halorgium</strong></td>
+                <td align="right">19edfffd <a href="">Changeset &rarr;</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="2">Breaks everything</th>
+              </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+
+      <table border="0" class="footer">
+        <tr>
+          <td style="">
+            <img src="https://travis-ci.org/images/mailer/footer-logo-38x38.png" style="margin-right: 16px; width: 38px; height: 38px;" />
+          </td>
+          <td style="">
+            <a href="http://about.travis-ci.org/docs" style="color: #aaa;">Documentation</a> about Travis CI<br/>
+            For help please join our IRC channel irc.freenode.net#travis.<br/>
+            Choose who receives these build notification emails in your <a href="http://about.travis-ci.org/docs/user/build-configuration" style="color: #aaa;">configuration file</a>.
+          </td>
+        </tr>
+      </table>
+
+      <div class="section footnote" style="">
+        <img id="mascot" src="travis-mascot.png" width="80" >
+        <p><strong>Would you like to test your private code?</strong></p>
+        <p><a
+            href="http://travisci.com?utm_source=build_email_footer&utm_campaign=travis-ci.org&utm_medium=email">Travis
+            Pro</a> could be your new best friend!</p>
+      </div>
+
+      <div class="tiny-footer">
+        <span>Travis CI is powered by </span><a href="http://bluebox.net"><img src="https://travis-ci.org/images/sponsors/bluebox-78x15.png"></a>
+      </div>
+    </div>
+</body>
+</html>
