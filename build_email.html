@@ -40,6 +40,8 @@
 
       .repository td img {
         vertical-align: middle;
+        width: 40px;
+        height: 40px;
       }
 
       .repository td span {
@@ -98,7 +100,7 @@
       }
 
       #build thead td {
-        border-top: 1px solid #606060;
+        border-top: 1px solid #808080;
         border-bottom: 1px solid #adadad;
       }
 
@@ -155,12 +157,16 @@
         padding-bottom: 5px;
       }
 
-      #build tbody tr:last-child td {
+      #build tbody tr:last-child td:last-child {
         padding-bottom: 20px;
         padding-top: 0px;
         border-bottom: 1px solid #adadad;
-        border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+      }
+
+      #build tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 5px;
+        border-bottom: 1px solid #adadad;
       }
 
       #build table {
@@ -248,7 +254,7 @@
         margin-bottom: 5px;
       }
 
-      .footnote a {
+      .footnote a, .footer a {
         color: #606060;
       }
 
@@ -298,13 +304,13 @@
           <td><img src="https://secure.gravatar.com/avatar/27f95ff21f0a4b94a72de0e8f780d4d2?s=40"/> <span><strong>engineyard / ey-gem</strong> (master)</span></td>
         </tr>
       </table>
-      <div id="build" class="error" style="">
+      <div id="build" class="failure" style="">
         <div class="content" style="">
           <table>
             <thead>
               <tr>
                 <td><div class="status-image"></div></td>
-                <td class="build-message"><span>Build #197 had an error</span></td>
+                <td class="build-message"><span>Build #197 has failed</span></td>
                 <td align="right" class="time"><div class="stop-watch"></div> <span>6 minutes, 20 seconds</span></td>
               </tr>
             </thead>
@@ -325,23 +331,21 @@
 
       <table border="0" class="footer">
         <tr>
-          <td style="">
-            <img src="https://travis-ci.org/images/mailer/footer-logo-38x38.png" style="margin-right: 16px; width: 38px; height: 38px;" />
+          <td>
+            <img src="email-footer-travis-logo.png" style="width: 50px; height: 50px;" />
           </td>
           <td style="">
-            <a href="http://about.travis-ci.org/docs" style="color: #aaa;">Documentation</a> about Travis CI<br/>
+            <a href="http://about.travis-ci.org/docs">Documentation</a> about Travis CI<br/>
             For help please join our IRC channel irc.freenode.net#travis.<br/>
-            Choose who receives these build notification emails in your <a href="http://about.travis-ci.org/docs/user/build-configuration" style="color: #aaa;">configuration file</a>.
+            Choose who receives these build notification emails in your <a href="http://about.travis-ci.org/docs/user/build-configuration">configuration file</a>.
           </td>
         </tr>
       </table>
 
-      <div class="section footnote" style="">
+      <div class="section footnote">
         <img id="mascot" src="travis-mascot.png" width="80" >
         <p><strong>Would you like to test your private code?</strong></p>
-        <p><a
-            href="http://travisci.com?utm_source=build_email_footer&utm_campaign=travis-ci.org&utm_medium=email">Travis
-            Pro</a> could be your new best friend!</p>
+        <p><a href="http://travisci.com?utm_source=build_email_footer&utm_campaign=travis-ci.org&utm_medium=email">Travis Pro</a> could be your new best friend!</p>
       </div>
 
       <div class="tiny-footer">
