@@ -21,7 +21,6 @@
 
       #build {
         border-radius: 5px;
-        border: 1px solid #adadad;
         padding: 0px;
         width: 100%;
         font-size: 13px;
@@ -63,20 +62,54 @@
         padding-top: 5px;
       }
 
+      #build.failure thead td.build-message {
+        background: url(arrow-failed.png) no-repeat right center;
+        background-size: 20px;
+      }
+
+      #build.success thead td.build-message {
+        background: url(arrow-succeeded.png) no-repeat right center;
+        background-size: 20px;
+      }
+
+      #build.error thead td.build-message {
+        background: url(arrow-error.png) no-repeat right center;
+        background-size: 20px;
+      }
+
       #build thead tr {
-        border-bottom: 1px solid #adadad;
         font-weight: 700;
         font-size: 18px;
       }
 
-      #build.failed thead tr {
+      #build.failure thead tr {
         background-color: #fdcdce;
         color: #df192a;
       }
       
-      #build.succeeded thead tr {
+      #build.success thead tr {
         background-color: #baecb7;
         color: #32a32d;
+      }
+
+      #build.error thead tr {
+        background-color: #cccccc;
+        color: #707070;
+      }
+
+      #build thead td {
+        border-top: 1px solid #606060;
+        border-bottom: 1px solid #adadad;
+      }
+
+      #build thead td:first-child {
+        border-left: 1px solid #606060;
+        border-top-left-radius: 5px;
+      }
+
+      #build thead td:last-child {
+        border-right: 1px solid #606060;
+        border-top-right-radius: 5px;
       }
 
       #build .status-image {
@@ -88,17 +121,29 @@
         vertical-align: middle;
       }
 
-      #build.succeeded .status-image {
+      #build.success .status-image {
         background: url(success.png) no-repeat;
       }
 
-      #build.failed .status-image {
+      #build.failure .status-image {
         background: url(failed.png) no-repeat;
+      }
+
+      #build.error .status-image {
+        background: url(error.png) no-repeat;
       }
 
       #build tbody td {
         padding: 10px 20px 10px 0px;
         height: 20px;
+      }
+
+      #build tbody td:first-child {
+        border-left: 1px solid #adadad;
+      }
+
+      #build tbody td:last-child {
+        border-right: 1px solid #adadad;
       }
 
       #build tbody {
@@ -113,6 +158,9 @@
       #build tbody tr:last-child td {
         padding-bottom: 20px;
         padding-top: 0px;
+        border-bottom: 1px solid #adadad;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
       }
 
       #build table {
@@ -152,12 +200,16 @@
         display: inline-block;
       }
 
-      #build.failed .time .stop-watch {
+      #build.failure .time .stop-watch {
         background: url(stopwatch-failed.png) no-repeat;
       }
 
-      #build.succeeded .time .stop-watch {
+      #build.success .time .stop-watch {
         background: url(stopwatch-success.png) no-repeat;
+      }
+
+      #build.error .time .stop-watch {
+        background: url(stopwatch-error.png) no-repeat;
       }
 
       .time span {
@@ -221,9 +273,8 @@
         font-size: 12px;
         text-align: center;
         margin: 0px auto;
-        margin-top: 10px;
         vertical-align: middle;
-        height: 15px;
+        height: 20px;
       }
 
       .tiny-footer img {
@@ -232,6 +283,11 @@
 
       .tiny-footer span {
         vertical-align: middle;
+      }
+
+      .tiny-footer p {
+        margin-top: 10px;
+        padding-left: 80px;
       }
     </style>
   </head>
@@ -242,13 +298,13 @@
           <td><img src="https://secure.gravatar.com/avatar/27f95ff21f0a4b94a72de0e8f780d4d2?s=40"/> <span><strong>engineyard / ey-gem</strong> (master)</span></td>
         </tr>
       </table>
-      <div id="build" class="failed" style="">
+      <div id="build" class="error" style="">
         <div class="content" style="">
           <table>
             <thead>
               <tr>
                 <td><div class="status-image"></div></td>
-                <td style="">Build #270 was successful</td>
+                <td class="build-message"><span>Build #197 had an error</span></td>
                 <td align="right" class="time"><div class="stop-watch"></div> <span>6 minutes, 20 seconds</span></td>
               </tr>
             </thead>
@@ -289,7 +345,9 @@
       </div>
 
       <div class="tiny-footer">
-        <span>Travis CI is powered by </span><a href="http://bluebox.net"><img src="https://travis-ci.org/images/sponsors/bluebox-78x15.png"></a>
+        <p> 
+          <span>Travis CI is powered by </span><a href="http://bluebox.net"><img src="https://travis-ci.org/images/sponsors/bluebox-78x15.png"></a>
+        </p>
       </div>
     </div>
 </body>
